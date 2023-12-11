@@ -75,7 +75,6 @@ public class Karakter {
                     + "\n De sikeresen felhasználtál %d darabot!", targy, darab);
         } else {
             System.out.printf("Sikeresen felhsaználtál %d darab tárgyat ebből: %s", darab, targy);
-            felszereles.remove(targy);
         }
     }
 

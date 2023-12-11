@@ -1,8 +1,58 @@
 package jatekjava;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Karakter {
+    Random rnd;
     private int eletero, ugyesseg, szerencse;
-    private ArrayList<String> felszereles;
+    private ArrayList<Targy> felszereles;
+
+    public Karakter() {
+        this.eletero = dobokocka(2) + 12;
+        this.ugyesseg = dobokocka(1) + 6;
+        this.szerencse = dobokocka(1) + 6;
+    }
+    
+    private int dobokocka(int db){
+        int eredmeny = 0;
+        for (int i = 0; i < db; i++) {
+            eredmeny += rnd.nextInt(6) + 1;
+        }
+        return eredmeny;
+    }
+
+    public void setEletero(int eletero) {
+        this.eletero = eletero;
+    }
+
+    public void setUgyesseg(int ugyesseg) {
+        this.ugyesseg = ugyesseg;
+    }
+
+    public void setSzerencse(int szerencse) {
+        this.szerencse = szerencse;
+    }
+
+    public int getEletero() {
+        return eletero;
+    }
+
+    public int getUgyesseg() {
+        return ugyesseg;
+    }
+
+    public int getSzerencse() {
+        return szerencse;
+    }
+    
+    public void felvesz(Targy targy){
+        felvesz(targy, 1);
+    }
+    
+    public void felvesz(Targy targy, int db){
+        for (int i = 0; i < db; i++) {
+            felszereles.add(targy);
+        }
+    }
 }

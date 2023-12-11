@@ -26,7 +26,7 @@ public class Targy {
 
     @Override
     public String toString() {
-        return "Tárgyunk:\n\tEgyedi azonosítója = " + id + "\n\tMegnevezés = " + name + "\n\t desc = " + desc;
+        return "Tárgyunk:\n\tEgyedi azonosítója = ( " + id + " )\n\tMegnevezése = ( " + name + " )\n\t Leírása = ( " + desc+ " )\n";
     }
     
     
